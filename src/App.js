@@ -39,9 +39,11 @@ function App() {
         <div className="header-text-box">
           <h1>We design and build better chairs, for a better life</h1>
           <p className="header-text">
-            In a small shop in the heart of Lisbon, we spend our days
-            relentlessly perfecting the chair. The result is a perfect blend of
-            beauty and comfort, that will have a lasting impact on your health.
+            It's an easy concept to understand — but not so easy for many
+            manufacturers to make happen. Everyone deserves quality. A fusing of
+            style and comfort ignited by the spark of ingenuity. In giving the
+            ordinary that something extra, we deliver a unique elevated
+            experience to any office environment.
           </p>
           <a className="btn btn--big" href="#">
             Shop chairs

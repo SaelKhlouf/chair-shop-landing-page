@@ -13,7 +13,9 @@ function ChairComponent({ name, id, features, price }) {
         </ul>
         <div className="chair-price">
           <strong>{price}€</strong>
-          <a href="#" className="btn btn--small">
+        </div>
+        <div>
+          <a href="#" className="btn btn--small btn--cart">
             Add to cart
           </a>
         </div>

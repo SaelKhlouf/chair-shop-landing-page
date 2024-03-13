@@ -37,7 +37,9 @@ function App() {
     <div className="container">
       <header>
         <div className="header-text-box">
-          <h1>We design and build better chairs, for a better life</h1>
+          <h1 className="header-intro">
+            We design and build better chairs, for a better life
+          </h1>
           <p className="header-text">
             It's an easy concept to understand — but not so easy for many
             manufacturers to make happen. Everyone deserves quality. A fusing of

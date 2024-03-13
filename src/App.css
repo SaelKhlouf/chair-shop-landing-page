@@ -39,6 +39,11 @@ body {
 
   /*letter spacing*/
   --fs-ls: -0.03rem;
+
+  /* colors */
+  --color-primary: #099268;
+  --color-grey: #495057;
+  --color-secondary: #1c6c54;
 }
 
 /* ------------------------ */
@@ -46,6 +51,8 @@ body {
 /* ------------------------ */
 body {
   font-family: "Inter", sans-serif;
+  color: var(--color-grey);
+  border-bottom: 1rem solid var(--color-primary);
 }
 
 .container {
@@ -111,6 +118,10 @@ p {
   margin-bottom: 2.4rem;
 }
 
+.header-intro {
+  color: var(--color-primary);
+}
+
 /* ------------------------ */
 /* COMPONENT STYLES */
 /* ------------------------ */
@@ -125,6 +136,9 @@ p {
 }
 
 .testimonial-section {
+  background-color: var(--color-primary);
+  padding: 2rem;
+  color: white;
 }
 
 .testimonial-box {
@@ -179,6 +193,34 @@ footer {
 }
 
 .btn {
-  font-size: var(--fs-6);
+  display: inline-block;
+}
+
+.btn:link,
+.btn:visited {
   line-height: var(--fs-6-lh);
+  background-color: #099268;
+  color: white;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: var(--color-secondary);
+}
+
+.btn--big {
+  font-size: var(--fs-6);
+  padding: 1rem 2rem;
+}
+
+.btn--small {
+  font-size: var(--fs-7);
+  padding: 0.8rem 1.6rem;
+}
+
+.btn--cart {
 }

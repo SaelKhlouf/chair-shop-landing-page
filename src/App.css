@@ -227,3 +227,15 @@ footer {
 .btn--cart {
   width: fit-content;
 }
+
+.svg {
+  display: inline;
+  width: 5.5rem;
+  height: 5.5rem;
+  fill: var(--color-primary);
+}
+
+.svg--small {
+  width: 3.5rem;
+  height: 3.5rem;
+}

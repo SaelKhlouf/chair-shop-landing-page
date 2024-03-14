@@ -1,3 +1,5 @@
+import ChairFeatureSvgComponent from "./ChairFeatureSvgComponent";
+
 function ChairComponent({ name, id, features, price }) {
   return (
     <figure className="chair">
@@ -6,8 +8,11 @@ function ChairComponent({ name, id, features, price }) {
         <h3>{name}</h3>
         <ul className="chair-details">
           {features.map((feature) => (
-            <li key={feature}>
-              <span>{feature}</span>
+            <li key={feature.desc}>
+              <ChairFeatureSvgComponent
+                type={feature.type}
+              ></ChairFeatureSvgComponent>
+              <span>{feature.desc}</span>
             </li>
           ))}
         </ul>

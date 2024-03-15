@@ -45,7 +45,7 @@ body {
   --color-grey: #495057;
   --color-secondary: #1c6c54;
 
-  --grid-min-fr: 32rem;
+  --grid-min-fr: 320px;
 }
 
 /* ------------------------ */
@@ -80,7 +80,7 @@ header {
 
 @media (width < 375px) {
   :root {
-    --grid-min-fr: 26rem;
+    --grid-min-fr: 260px;
   }
 }
 

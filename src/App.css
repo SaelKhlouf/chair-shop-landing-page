@@ -5,7 +5,7 @@
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
 html {
@@ -30,8 +30,8 @@ body {
   --fs-8: 1.333rem;
 
   /*line height*/
-  --fs-1-lh: 1;
-  --fs-2-lh: 1.15;
+  --fs-1-lh: 1.2;
+  --fs-2-lh: 1.2;
   --fs-3-lh: 1.25;
   --fs-4-lh: 1.4;
   --fs-5-lh: 1.5;
@@ -44,6 +44,8 @@ body {
   --color-primary: #099268;
   --color-grey: #495057;
   --color-secondary: #1c6c54;
+
+  --grid-min-fr: 32rem;
 }
 
 /* ------------------------ */
@@ -56,43 +58,61 @@ body {
 }
 
 .container {
-  width: 96rem;
+  width: 90%;
   margin: 0 auto;
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12rem;
 }
 
 .grid-3-cols {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 8rem;
-}
-
-.grid-2-cols {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  column-gap: 8rem;
+  grid-template-columns: repeat(auto-fit, minmax(var(--grid-min-fr), 1fr));
+  gap: 8rem;
 }
 
 header {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 8rem;
-  margin-top: 4.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(var(--grid-min-fr), 1fr));
+  gap: 8rem;
 }
 
-header,
+@media (width < 375px) {
+  :root {
+    --grid-min-fr: 26rem;
+  }
+}
+
+.header-text-box {
+  align-self: center;
+}
+
+.header-image {
+  /* max-width: 60rem; be careful because this will destroy everything, because the grid will give it 60rem most times */
+  object-fit: cover;
+}
+
 section {
-  margin-bottom: 4.8rem;
+}
+
+.header-text {
+  margin-bottom: 2.4rem;
+}
+
+.header-intro {
+  color: var(--color-primary);
 }
 
 h1 {
-  margin-bottom: 2.4rem;
+  margin-bottom: 7rem;
   font-size: var(--fs-1);
   line-height: var(--fs-1-lh);
   letter-spacing: var(--fs-ls);
 }
 
 h2 {
-  margin-bottom: 4.8rem;
+  margin-bottom: 2.3rem;
   font-size: var(--fs-2);
   line-height: var(--fs-2-lh);
   letter-spacing: var(--fs-ls);
@@ -110,21 +130,13 @@ p {
   line-height: var(--fs-6-lh);
 }
 
-.header-text-box {
-  align-self: center;
-}
-
-.header-text {
-  margin-bottom: 2.4rem;
-}
-
-.header-intro {
-  color: var(--color-primary);
-}
-
 /* ------------------------ */
 /* COMPONENT STYLES */
 /* ------------------------ */
+
+.special-section {
+}
+
 .features-icon {
 }
 
@@ -136,14 +148,17 @@ p {
 }
 
 .testimonial-section {
-  background-color: var(--color-primary);
-  padding: 2rem;
-  color: white;
+  color: var(--color-grey);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--grid-min-fr), 1fr));
+  gap: 4rem;
+}
+
+.testimonial-section-img {
+  object-fit: cover;
 }
 
 .testimonial-box {
-  grid-column: 2 / -1;
-  align-self: center;
 }
 
 .testimonial-box h2 {
@@ -159,18 +174,22 @@ p {
 
 .chair-box {
   padding: 2.4rem;
+  box-shadow: 0px 0px 30px 4px rgba(94, 91, 91, 0.76);
 }
 
 .chair-details {
   list-style: none;
-  margin-bottom: 2.4rem;
+  margin-bottom: 4.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
 .chair-details li {
   display: flex;
   align-items: center;
   gap: 1.2rem;
-  margin-bottom: 2.4rem;
 }
 
 .chair-details li:last-child {
@@ -182,7 +201,7 @@ p {
 
 .chair-price {
   display: flex;
-  gap: 2rem;
+  gap: 0.7rem;
   flex-direction: column;
   justify-content: space-between;
   font-size: var(--fs-6);
@@ -191,7 +210,7 @@ p {
 
 footer {
   margin-bottom: 4.8rem;
-  font-size: var(--fs-7);
+  font-size: var(--fs-6);
 }
 
 .btn {
@@ -212,11 +231,6 @@ footer {
 .btn:hover,
 .btn:active {
   background-color: var(--color-secondary);
-}
-
-.btn--big {
-  font-size: var(--fs-6);
-  padding: 1rem 2rem;
 }
 
 .btn--small {

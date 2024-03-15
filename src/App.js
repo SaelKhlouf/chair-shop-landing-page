@@ -88,14 +88,11 @@ function App() {
             ordinary that something extra, we deliver a unique elevated
             experience to any office environment.
           </p>
-          <a className="btn btn--big" href="#">
-            Shop chairs
-          </a>
         </div>
-        <img src="hero.jpg" alt="Photo" />
+        <img src="hero.jpg" alt="Photo" className="header-image" />
       </header>
 
-      <section>
+      <section className="special-section">
         <h2>What makes our chairs special</h2>
         <div className="grid-3-cols">
           <div>
@@ -157,16 +154,21 @@ function App() {
       </section>
 
       <section className="testimonial-section">
-        <div className="grid-2-cols">
-          <img src="customers.jpg" alt="People sitting on chairs" />
-          <div className="testimonial-box">
-            <h2>"We couldn't live without these chairs anymore"</h2>
-            <blockquote className="testimonial-text">
-              These chairs from your shop are not just seats; they're a
-              lifestyle upgrade we didn't know we needed until now!
-            </blockquote>
-            <p className="testimonial-author">&mdash; Mai and Alex Johnson</p>
-          </div>
+        <div>
+          <img
+            src="customers.jpg"
+            alt="People sitting on chairs"
+            className="testimonial-section-img"
+          />
+        </div>
+
+        <div className="testimonial-box">
+          <h2>"We couldn't live without these chairs anymore"</h2>
+          <blockquote className="testimonial-text">
+            These chairs from your shop are not just seats; they're a lifestyle
+            upgrade we didn't know we needed until now!
+          </blockquote>
+          <p className="testimonial-author">&mdash; Mai and Alex Johnson</p>
         </div>
       </section>
 
